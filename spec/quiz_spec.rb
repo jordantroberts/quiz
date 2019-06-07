@@ -4,16 +4,15 @@ describe Quiz do
 
   let(:quiz) { described_class.new }
 
-  describe '#generate_question' do
-    it 'generates a random question' do
-      srand(2)
-      expect(quiz.generate_question).to eq "What is the capital of Japan?"
-    end
+  before do
+    allow($stdout).to receive(:write)
+    allow(quiz).to receive(:gets).and_return("Toyko\n")
   end
 
-  describe '#user_answer' do
-    it 'compares user answer to question' do
-      expect(quiz.user_answer).to eq "Correct!" 
+  describe '#generate_question' do
+    it 'asks a user a random quiz question' do
+      srand(2)
+      expect(quiz.generate_question).to eq "Correct!"
     end
   end
 end
