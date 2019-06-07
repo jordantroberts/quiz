@@ -10,4 +10,10 @@ describe Quiz do
       expect(quiz.generate_question).to eq "What is the capital of Japan?"
     end
   end
+
+  describe '#user_answer' do
+    it 'compares user answer to question' do
+      expect(quiz.user_answer).to eq "Correct!" 
+    end
+  end
 end
