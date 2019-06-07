@@ -7,7 +7,12 @@ attr_reader :question, :questions, :answer
     @questions = {
       "What is the capital of Japan?" => "Toyko",
       "What is the capital of Portugal?" => "Lisbon",
-      "What is the capital of Peru?" => "Lima"
+      "What is the capital of Peru?" => "Lima",
+      "What is the capital of Germany?" => "Berlin",
+      "What is the capital of Australia?" => "Canberra",
+      "What is the capital of Vietnam?" => "Hanoi",
+      "What is the capital of Chile?" => "Santiago",
+      "What is the capital of Austria?" => "Vienna",
     }
     @question = questions.keys.sample
     user_answer
