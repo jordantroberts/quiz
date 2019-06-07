@@ -6,7 +6,8 @@ describe Quiz do
 
   describe '#generate_question' do
     it 'generates a random question' do
-      expect(quiz.generate_question).to eq "What is the capital of Japan?" 
+      srand(2)
+      expect(quiz.generate_question).to eq "What is the capital of Japan?"
     end
   end
 end
